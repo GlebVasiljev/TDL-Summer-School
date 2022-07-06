@@ -1,26 +1,21 @@
 
-let input = 'TTCCAAXX';
-
-convert(input);
-
-function convert(string) {
-    let result;
-    for (let i = 0; i < string.lenght; i++) {
-        switch (string[i]) {
+const input = 'TTCCAAXX';
+const result = new Set();
+    for (let i = 0; i <= input.length; i++) {
+        switch (input[i]) {
             case 'T':
-                result.push = 'C';
-                break;
+                result.add('C');
+                continue;
             case 'C':
-                result.push = 'T';
-                break;
+                result.add('T');
+                continue;
             case 'A':
-                result.push = 'D';
-                break;
+                result.add('D');
+                continue;
             case 'X':
-                result.push = 'Y';
-                break;
+                result.add('Y');
+                continue;
         }
 
         console.log(result);
     }
-}
