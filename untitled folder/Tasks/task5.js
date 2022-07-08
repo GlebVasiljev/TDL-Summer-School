@@ -9,32 +9,40 @@ const Sort = function(sentence){
         StoringData(temp[i]);
     }
 
-    function LetterSearch(letter){
-        for(let i = 0 ; i < IndexArray.length-1 ; i ++){
-            if (letter == IndexArray[i]){
-                return IndexArray[i];
-            }
-        }
-    }
-
+    
     function StoringData(word){
-        let letter = word[0];
+        let letter = String(word[0].toUpperCase());
         let index;
         let data = word;
-        if(letter == IndexArray.find(LetterSearch)){
-            myMap.add
-            
-        } else { 
-            IndexArray.push(letter);
-            index = letter;
-            
+        //serching index in array 
+            if(CheckInArray(letter)){
+                //if exists strore data
+                let temp = myMap.get(index);
+                myMap.set(index, data + temp); // adding to letter
+            }else {
+                //if not 
+                index = letter;
+                IndexArray.push(letter); //store letter in letter array
+                myMap.set(index, data); // create new letter
+            }
+            console.log("Index :" + index + " = " + data);
+            console.log(IndexArray);
         }
 
-        myMap.set(index, data);
-        console.log("Index :" + index + " = " + data);
+        function CheckInArray(tempLetter){
+            for(let i = 0; i < IndexArray.length-1 ; i++){
+                if(tempLetter == IndexArray[i]){
+                    index = tempLetter;
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+        }
+        
+        
     }
-    console.log(IndexArray);
-}
+    
 
 let input = 'We are in TDL School We are leaning Javascript What Was Where';
 
