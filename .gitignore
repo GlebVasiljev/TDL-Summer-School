@@ -1,2 +1,5 @@
 NewFolder/node_modules
 NewFolder/FinalTask/node_modules
+QA/node_modules
+QA/cypress/e2e/2-advanced-examples
+QA/cypress/e2e/1-getting-started
