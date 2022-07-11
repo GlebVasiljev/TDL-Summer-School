@@ -1,4 +1,4 @@
-import Page from './DuckDuckGo.page';
+import url from './KatalonHomePage.cy'
 
 class BasePage {
     static get url() {

@@ -41,4 +41,17 @@ describe("How to open calc and sum two numbers", () => {
       .click();
     DuckDuckGoPage.calculatorDisplay.scrollIntoView().should("have.text", "Infinity");
   });
+
+  //Third test
+  it("Timer results " , () => {
+    DuckDuckGoPage.searchField.type("stopwatch{enter}");
+    DuckDuckGoPage.startButton.click();
+    cy.wait(10000);
+    // if(DuckDuckGoPage.totalTimeResult == "00:10.00"){
+      DuckDuckGoPage.stopButton.click();
+    DuckDuckGoPage.totalTimeResult.contains("00:10");
+  });
+
+  //Test 4
+  
 });
