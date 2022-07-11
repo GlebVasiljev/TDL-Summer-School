@@ -1,3 +1,5 @@
+//adding array in the middle of diffrent array
+
 const arr1 = [1,2,4,5,6];
 const arr2 = [3,4];
 const tuckIn = function (array1 , array2){
